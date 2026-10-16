@@ -28,3 +28,6 @@ ACTUALIZACIÓN DE CABECERA: selector de idioma ES/EN/FR, botón de ayuda con ins
 
 
 Versión v10: el registro de paciente incluye padecimientos conocidos, alergias a medicamentos, alergias alimentarias y medicamentos indicados actualmente. Los datos siguen guardándose localmente en este navegador.
+
+
+VERSION 12: incluye etiqueta visible de versión, selección de idioma ES/EN/FR aplicada al iniciar y una estrategia de actualización de PWA que prioriza la versión publicada en red para páginas HTML.

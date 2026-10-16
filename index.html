@@ -21,6 +21,7 @@
 <header class="top">
  <div class="topline"><div class="brandlockup"><img class="brandlogo" src="saludplus-logo.svg" alt="Logo SaludPlus"><div><div class="brand">Salud<span>Plus</span></div><div class="sub" id="brandSubtitle">Control hoy, bienestar mañana</div></div></div>
   <div class="header-actions" aria-label="Herramientas de cabecera">
+   <span id="buildVersion" style="display:inline-flex;align-items:center;border:1px solid #ffffff75;background:#ffffff18;color:#fff;border-radius:10px;min-height:30px;padding:4px 8px;font-size:11px;font-weight:800" title="Versión publicada">SaludPlus v12 · ES / EN / FR</span>
    <div class="language-tools" role="group" aria-label="Language / Idioma">
     <button type="button" class="lang-btn active" data-lang="es" aria-label="Español" title="Español">🇪🇸 <span>ES</span></button>
     <button type="button" class="lang-btn" data-lang="en" aria-label="English" title="English">🇺🇸 <span>EN</span></button>
@@ -314,7 +315,7 @@ document.getElementById('reportDate').addEventListener('change',reportHtml);
 document.getElementById('exportReportBtn').addEventListener('click',exportReportCSV);
 document.getElementById('printReportBtn').addEventListener('click',()=>{reportHtml();window.print()});
 
-setDefaults();document.getElementById("reportDate").value=today();render();reportHtml();startReminderChecks();setLanguage(localStorage.getItem('saludplus_language')||'es');
+setDefaults();document.getElementById("reportDate").value=today();render();reportHtml();startReminderChecks();setLanguage(localStorage.getItem('saludplus_language')||'es');setTimeout(()=>setLanguage(localStorage.getItem('saludplus_language')||'es'),250);
 if('serviceWorker' in navigator && location.protocol.startsWith('http'))navigator.serviceWorker.register('./sw.js').catch(()=>{});
 </script>
 </body></html>
